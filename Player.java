@@ -81,9 +81,20 @@ public abstract class Player {
         this.shirtNumber = shirtNumber;
     }
  
-    public double getBaseSalary() { return baseSalary; }
-    public String getStatus() { return status; }
+    public double getBaseSalary() { 
+        return baseSalary; 
+    }
+    
+    public String getStatus() { 
+        return status; 
+    }
  
-    public void setStatus(String status) { this.status = status; }
-    public void setBaseSalary(double baseSalary) { this.baseSalary = baseSalary; }
+    public void setStatus(String status) { 
+        this.status = status; 
+    }
+    
+    public void setBaseSalary(double baseSalary) { 
+        this.baseSalary = baseSalary; 
+    }
+    
 }
