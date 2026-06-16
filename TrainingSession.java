@@ -1,36 +1,28 @@
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TrainingSession {
-    private String trainingId;
-    private LocalDate date;
+    private String trainingID;
+    private String date;
     private String location;
     private String topic;
-    private List<Player> attendees;
- 
-    public TrainingSession(String trainingId, LocalDate date, String location, String topic) {
-        this.trainingId = trainingId;
+
+    public TrainingSession(String trainingID, String date, String location, String topic) {
+        this.trainingID = trainingID;
         this.date = date;
         this.location = location;
         this.topic = topic;
-        this.attendees = new ArrayList<>();
     }
- 
-    public void addAttendee(Player player) {
-        attendees.add(player);
-    }
- 
-    public void displayTrainingInfo() {
-        System.out.println("Training ID: " + trainingId + ", Date: " + date +
-                ", Location: " + location + ", Topic: " + topic +
-                ", Attendees: " + attendees.size());
-    }
- 
-    // Getters
-    public String getTrainingId() { return trainingId; }
-    public LocalDate getDate() { return date; }
+
+    public String getTrainingID() { return trainingID; }
+    public String getDate() { return date; }
     public String getLocation() { return location; }
     public String getTopic() { return topic; }
-    public List<Player> getAttendees() { return attendees; }
+
+    public String toCSV() {
+        return trainingID + "," + date + "," + location + "," + topic;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%-6s %-12s %-25s %s", trainingID, date, location, topic);
+    }
 }
