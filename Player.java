@@ -42,8 +42,12 @@ public abstract class Player {
 
     // Setters
     public void setFullName(String fullName) { this.fullName = fullName; }
-    public void setAge(int age) { this.age = age; }
-    public void setNationality(String nationality) { this.nationality = nationality; }
+    public void setAge(int age) { 
+        this.age = age; 
+        }
+    public void setNationality(String nationality) { 
+        this.nationality = nationality; 
+        }
     public void setPosition(String position) { this.position = position; }
     public void setShirtNumber(int shirtNumber) { this.shirtNumber = shirtNumber; }
     public void setBaseSalary(double baseSalary) { this.baseSalary = baseSalary; }
